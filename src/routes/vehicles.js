@@ -31,7 +31,7 @@ router.route('/vehicles')
         Vehicle.find((err, vehicles)=>send(res, err, vehicles))
     })
 
-router.route('/vehicle/:vehicle_id')
+router.route('/vehicles/:vehicle_id')
     .get((req, res) => {
         Vehicle.findById(req.params.vehicle_id, 
             (err, vehicle)=>send(res, err, vehicle))
